@@ -21,3 +21,4 @@ After the initial bootstrapping you'll got a ready-to-use environment (except th
 Not all installation steps can or should be automated. The following checklist will assist you with manual steps:
 
 - [ ] Turn on FileVault
+- [ ] Configure the VPN client
