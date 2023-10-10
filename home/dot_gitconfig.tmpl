@@ -1,6 +1,11 @@
 [user]
   email = {{ .gitEmail }}
   name = {{ .gitName }}
+[core]
+  editor = vim
+[alias]
+  hist = log --oneline --graph --decorate --all
+  bhist = log --oneline --graph --decorate
 [commit]
   gpgSign = true
 [gpg]
