@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 brew "chezmoi"
+cask "firefox"
 cask "secretive"
 cask "tunnelblick"
 cask "visual-studio-code"
