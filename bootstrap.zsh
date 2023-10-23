@@ -14,7 +14,6 @@ function update_system {
 
 function install_brew {
   # NONINTERACTIVE for skipping "are you sure?" prompts from homebrew
-  sudo -v
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
@@ -33,10 +32,10 @@ function populate_dotfiles {
 COMMENT
 
   # Preserve chezmoi.toml config file to not prompt user one more time during subsequent `chezmoi init --ssh` step
-  local TMP_DIR=`mktemp -d`
-  sh -c "$(curl -fsLS get.chezmoi.io)" -- init --one-shot --config-path="$TMP_DIR/chezmoi.toml" revyh
+  local tmp_dir=`mktemp -d`
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- init --one-shot --config-path="$tmp_dir/chezmoi.toml" revyh
   mkdir -p ~/.config/chezmoi
-  cp "$TMP_DIR/chezmoi.toml" ~/.config/chezmoi/chezmoi.toml
+  cp "$tmp_dir/chezmoi.toml" ~/.config/chezmoi/chezmoi.toml
 }
 
 ask_sudo_access

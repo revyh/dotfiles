@@ -13,6 +13,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/revyh/dotfiles/HEAD/bootst
 ```
 
 After the initial bootstrapping you'll got a ready-to-use environment (except that your running shell won't load the installed settings). But without an ability to push changes to the github dotfiles repo. In order to fix that, you'll need to:
+
 1. Generate an SSH key using the installed [secretive app](https://github.com/maxgoedjen/secretive) and add the pubkey to the GitHub.
 1. Run `chezmoi init --ssh --apply revyh`
 
